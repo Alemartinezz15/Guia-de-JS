@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos onMouseOver y onMouseOut</title>
+    <style>
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function cambiarColor(elemento, color) {
+            elemento.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Eventos onMouseOver y onMouseOut</h1>
+    <table border="1">
+        <tr>
+            <td onmouseover="cambiarColor(this, 'lightblue')" onmouseout="cambiarColor(this, 'white')">
+                <a href="https://mail.google.com" target="_blank">Gmail</a>
+            </td>
+            <td onmouseover="cambiarColor(this, 'lightgreen')" onmouseout="cambiarColor(this, 'white')">
+                <a href="https://outlook.live.com" target="_blank">Hotmail</a>
+            </td>
+            <td onmouseover="cambiarColor(this, 'lightyellow')" onmouseout="cambiarColor(this, 'white')">
+                <a href="https://mail.yahoo.com" target="_blank">Yahoo</a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

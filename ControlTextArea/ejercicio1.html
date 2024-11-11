@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control TEXTAREA - Formulario de Visitas</title>
+    <script>
+        function mostrarDatos() {
+            const nombre = document.getElementById("nombre").value;
+            const email = document.getElementById("email").value;
+            const comentarios = document.getElementById("comentarios").value;
+
+            alert(`Nombre: ${nombre}\nEmail: ${email}\nComentarios: ${comentarios}`);
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Control TEXTAREA - Formulario de Visitas</h1>
+    <form>
+        <input type="text" id="nombre" placeholder="Nombre"><br><br>
+        <input type="email" id="email" placeholder="Email"><br><br>
+        <textarea id="comentarios" placeholder="Comentarios"></textarea><br><br>
+        <button type="button" onclick="mostrarDatos()">Mostrar Datos</button>
+    </form>
+
+</body>
+</html>

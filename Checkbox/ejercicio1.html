@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control CHECKBOX - Selección de Deportes</title>
+    <script>
+        function mostrarDeportesSeleccionados() {
+            const deportesSeleccionados = [];
+            if (document.getElementById('futbol').checked) {
+                deportesSeleccionados.push("Fútbol");
+            }
+            if (document.getElementById('basket').checked) {
+                deportesSeleccionados.push("Básket");
+            }
+            if (document.getElementById('tenis').checked) {
+                deportesSeleccionados.push("Tenis");
+            }
+            
+            if (deportesSeleccionados.length > 0) {
+                alert(`Deportes seleccionados: ${deportesSeleccionados.join(", ")}`);
+            } else {
+                alert("No seleccionaste ningún deporte.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Control CHECKBOX - Selección de Deportes</h1>
+    <form>
+        <label><input type="checkbox" id="futbol"> Fútbol</label><br>
+        <label><input type="checkbox" id="basket"> Básket</label><br>
+        <label><input type="checkbox" id="ten

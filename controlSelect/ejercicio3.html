@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+    <script>
+        function calcularImporte() {
+            const precios = {
+                "Queso": 4,
+                "Jamón y Queso": 6,
+                "Especial": 10
+            };
+            const tipoPizza = document.getElementById("tipoPizza").value;
+            const cantidad = parseInt(document.getElementById("cantidad").value);
+            const total = precios[tipoPizza] * cantidad;
+            document.getElementById("importe").value = `$${total}`;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Calcular Importe de Pizzas</h2>
+    <select id="tipoPizza">
+        <option value="Queso">Queso - $4</option>
+        <option value="Jamón y Queso">Jamón y Queso - $6</option>
+        <option value="Especial">Especial - $10</option>
+    </select>
+    <input type="number" id="cantidad" placeholder="Cantidad" min="1">
+    <button onclick="calcularImporte()">Calcular Importe</button>
+    <input type="text" id="importe" placeholder="Importe Total" readonly>
+
+</body>
+</html>

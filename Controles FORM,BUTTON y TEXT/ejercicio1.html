@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <script>
+        // Función para calcular el cubo y mostrarlo en un alert
+        function calcularCubo() {
+            // Obtener el valor del input
+            let numero = document.getElementById('numero').value;
+
+            // Verificar si el valor ingresado es un número
+            if (isNaN(numero) || numero === '') {
+                alert("Por favor, ingresa un número válido.");
+                return; 
+            }
+
+            // Calcular el cubo del número
+            let cubo = Math.pow(numero, 3); 
+
+            // Mostrar el resultado en un alert
+            alert(`El valor de ${numero} elevado al cubo es: ${cubo}`);
+        }
+    </script>
+</head>
+<body>
+    <h2>Calculadora de Cubo</h2>
+    
+    <!-- Campo de entrada para el número -->
+    <label for="numero">Ingresa un número entero:</label>
+    <input type="text" id="numero">
+    
+    <!-- Botón de ejecucion -->
+    <button onclick="calcularCubo()">Calcular Cubo</button>
+
+</body>
+</html>

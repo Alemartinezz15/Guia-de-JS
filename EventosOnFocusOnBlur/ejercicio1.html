@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos onFocus y onBlur</title>
+    <script>
+        function validarClave() {
+            const clave = document.getElementById("clave").value;
+            if (clave.length < 7 || clave.length > 20) {
+                alert("La clave debe tener entre 7 y 20 caracteres.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Eventos onFocus y onBlur</h1>
+    <form>
+        <input type="text" id="nombre" placeholder="Nombre"><br><br>
+        <input type="password" id="clave" placeholder="Clave" onblur="validarClave()"><br><br>
+    </form>
+
+</body>
+</html>

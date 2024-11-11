@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <script>
+        function mostrarPrecio() {
+            // Obtener el valor seleccionado del objeto select
+            let pizzaSeleccionada = document.getElementById("pizzas").value;
+
+            // Definir los precios de las pizzas
+            let precio;
+
+            // Asignar el precio según la pizza seleccionada
+            switch(pizzaSeleccionada) {
+                case "jamon_queso":
+                    precio = 500; 
+                    break;
+                case "muzzarella":
+                    precio = 450; 
+                    break;
+                case "morrones":
+                    precio = 550; 
+                    break;
+                default:
+                    precio = 0; 
+                    break;
+            }
+
+            // Mostrar el precio 
+            document.getElementById("precio").value = `$${precio}`;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Selecciona tu pizza</h2>
+
+    <!-- Select con las opciones de pizzas -->
+    <label for="pizzas">Tipo de pizza:</label>
+    <select id="pizzas" onchange="mostrarPrecio()">
+        <option value="">Selecciona una pizza</option>
+        <option value="jamon_queso">Jamón y Queso</option>
+        <option value="muzzarella">Muzzarella</option>
+        <option value="morrones">Morrones</option>
+    </select>
+
+    <br><br>
+
+    <!-- Campo de texto para mostrar el precio de la pizza seleccionada -->
+    <label for="precio">Precio:</label>
+    <input type="text" id="precio" readonly>
+
+</body>
+</html>

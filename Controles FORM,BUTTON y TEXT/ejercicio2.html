@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <script>
+        function mostrarMayor() {
+            let numero1 = parseFloat(document.getElementById("numero1").value);
+            let numero2 = parseFloat(document.getElementById("numero2").value);
+            let mayor = numero1 > numero2 ? numero1 : numero2;
+            alert(`El mayor de los números es: ${mayor}`);
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Mostrar el Mayor de Dos Números</h2>
+    <input type="text" id="numero1" placeholder="Ingrese el primer número">
+    <input type="text" id="numero2" placeholder="Ingrese el segundo número">
+    <button onclick="mostrarMayor()">Comparar</button>
+
+</body>
+</html>

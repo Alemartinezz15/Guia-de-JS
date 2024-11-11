@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Abrir Ventana a Medida</title>
+    <script>
+        function abrirVentana() {
+            const ancho = screen.width; // Obtiene el ancho completo del monitor
+            const alto = screen.height / 2; // Obtiene la mitad de la altura del monitor
+            window.open("https://www.example.com", "Ventana Medida", `width=${ancho},height=${alto}`);
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Abrir Ventana que Ocupa Todo el Ancho y la Mitad de la Altura</h1>
+    <button onclick="abrirVentana()">Abrir Ventana</button>
+
+</body>
+</html>

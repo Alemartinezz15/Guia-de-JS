@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Redirección Aleatoria a Webmail</title>
+    <script>
+        function redireccionarWebmail() {
+            const valorAleatorio = Math.floor(Math.random() * 3); // Genera un número entre 0 y 2
+
+            if (valorAleatorio === 0) {
+                window.location.href = "https://outlook.live.com"; // Outlook
+            } else if (valorAleatorio === 1) {
+                window.location.href = "https://mail.google.com"; // Gmail
+            } else if (valorAleatorio === 2) {
+                window.location.href = "https://mail.yahoo.com"; // Yahoo
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Redirección a Webmail</h1>
+    <button onclick="redireccionarWebmail()">Ir a Webmail Aleatorio</button>
+
+</body>
+</html>

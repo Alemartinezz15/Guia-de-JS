@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4</title>
+    <script>
+        function verificarRespuestas() {
+            const respuestasCorrectas = {
+                "pregunta1": "respuesta3",  // correcta: Tokio
+                "pregunta2": "respuesta2",  // correcta: Sol
+                "pregunta3": "respuesta3",  // correcta: Gasolina
+                "pregunta4": "respuesta1"   // correcta: Pavorreal
+            };
+            let correctas = 0;
+            let incorrectas = 0;
+            for (let pregunta in respuestasCorrectas) {
+                const seleccion = document.getElementById(pregunta).value;
+                if (seleccion === respuestasCorrectas[pregunta]) {
+                    correctas++;
+                } else {
+                    incorrectas++;
+                }
+            }
+            alert(`Correctas: ${correctas}, Incorrectas: ${incorrectas}`);
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Examen Múltiple Choice</h2>
+
+    <label>Pregunta 1: ¿Cuál es la capital de Japón?</label>
+    <select id="pregunta1">
+        <option value="respuesta1">Seúl</option>
+        <option value="respuesta2">Pekín</option>
+        <option value="respuesta3">Tokio</option>
+        <option value="respuesta4">Bangkok</option>
+    </select>
+
+    <label>Pregunta 2: ¿Qué es el centro de nuestro sistema solar?</label>
+    <select id="pregunta2">
+        <option value="respuesta1">La Tierra</option>
+        <option value="respuesta2">El Sol</option>
+        <option value="respuesta3">La Luna</option>
+        <option value="respuesta4">Júpiter</option>
+    </select>
+
+    <label>Pregunta 3: ¿Qué se usa comúnmente como combustible en los automóviles?</label>
+    <select id="pregunta3">
+        <option value="respuesta1">Carbón</option>
+        <option value="respuesta2">Electricidad</option>
+        <option value="respuesta3">Gasolina</option>
+        <option value="respuesta4">Gas</option>
+    </select>
+
+    <label>Pregunta 4: ¿Cuál de los siguientes es conocido por sus plumas coloridas?</label>
+    <select id="pregunta4">
+        <option value="respuesta1">Pavorreal</option>
+        <option value="respuesta2">Águila</option>
+        <option value="respuesta3">Halcon</option>
+        <option value="respuesta4">León</option>
+    </select>
+
+    <button onclick="verificarRespuestas()">Verificar Respuestas</button>
+
+</body>
+</html>
